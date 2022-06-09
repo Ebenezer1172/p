@@ -1,11 +1,15 @@
 import 'package:flutter/cupertino.dart';
-
+import 'package:note/firebase_api.dart'; 
 import 'user.dart';
 
 class UserNotifier extends ChangeNotifier {
   final TextEditingController _note = TextEditingController();
   final TextEditingController _titlee = TextEditingController();
   final TextEditingController _name = TextEditingController();
+
+  DateTime dateTime=DateTime.now();
+DateTime get createdTime => dateTime;
+  // static Object createdTime;
   TextEditingController get titlee => _titlee;
   TextEditingController get note => _note;
   TextEditingController get name => _name;
@@ -29,10 +33,12 @@ class UserNotifier extends ChangeNotifier {
     return user.isDone;
   }
 
-  addUser(User user) {
-    _userlist.add(user);
-    notifyListeners();
-  }
+   addUser(User user) => FirebaseApi.createUser(user);
+  //  addUser(User user) {
+  //   _userlist.add(user);
+  //   notifyListeners();
+  // }
+
 
   clear() {
     _note.clear();
@@ -67,7 +73,4 @@ class UserNotifier extends ChangeNotifier {
     user.note = note;
     notifyListeners();
   }
-}
-
-
-
+} 

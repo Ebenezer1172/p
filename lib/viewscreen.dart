@@ -15,6 +15,9 @@ class _ViewScreenState extends State<ViewScreen> {
   // final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   String title = '';
   String note = '';
+  String id = '';
+  DateTime createdTime=DateTime.now();
+  bool isDone=true;
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<UserNotifier>(context);
@@ -52,7 +55,7 @@ class _ViewScreenState extends State<ViewScreen> {
               //   return;
               // }
               // _formkey.currentState!.save();
-              provider.addUser(User(title, note));
+              provider.addUser(User(title, note,id,createdTime,isDone));
               provider.clear();
             },
             icon: const Icon(Icons.add),

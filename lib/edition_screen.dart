@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note/firebase_api.dart';
 import 'package:provider/provider.dart';
 import 'package:note/user_notifier.dart';
 import 'package:note/homepage.dart';  
@@ -16,6 +17,8 @@ class _EditionScreenState extends State<EditionScreen> {
   // final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   String title = '';
   String note = '';
+  DateTime createdTime= DateTime.now();
+  bool isDone= true;
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<UserNotifier>(context);
@@ -53,7 +56,7 @@ class _EditionScreenState extends State<EditionScreen> {
               //   return;
               // }
               // _formkey.currentState!.save();
-              provider.addUser(User(title, note , ));
+              provider.addUser(User(title, note , id ,createdTime,isDone));
               provider.clear();
             },
             icon: const Icon(Icons.add),
