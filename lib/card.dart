@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:note/user_notifier.dart';
@@ -29,7 +28,6 @@ class _ListBuilderState extends State<ListBuilder> {
                   color: Colors.green),
             ),
           )
-
         : ListView.separated(
             separatorBuilder: ((context, index) => Container(
                   color: Colors.green,
@@ -46,7 +44,8 @@ class _ListBuilderState extends State<ListBuilder> {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
-                  color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                  color: Colors
+                      .primaries[Random().nextInt(Colors.primaries.length)],
                   child: Expanded(
                       child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -60,15 +59,15 @@ class _ListBuilderState extends State<ListBuilder> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Checkbox(
                                         value: note.isDone,
                                         onChanged: (_) {
                                           provider = Provider.of<UserNotifier>(
                                               context,
-                                              listen: false);
-                                          //  var isDone =
+                                              listen: false); 
                                           provider.toggleUserStatus(note);
                                         }),
                                     const SizedBox(
@@ -85,9 +84,9 @@ class _ListBuilderState extends State<ListBuilder> {
                                 note.title,
                                 softWrap: true,
                                 style: const TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold),
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
                               ),
                               const SizedBox(
                                 height: 2,
