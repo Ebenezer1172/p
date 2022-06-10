@@ -43,6 +43,7 @@ class _ListBuilderState extends State<ListBuilder> {
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (BuildContext context, index) {
                   final note = snapshot.data!.docs[index].data();
+                  print(note);
 
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
