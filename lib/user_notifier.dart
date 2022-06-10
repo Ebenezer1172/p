@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:note/firebase_api.dart';
-// import 'package:note/firebase_api.dart'; 
+// import 'package:note/firebase_api.dart';
 import 'user.dart';
 
 class UserNotifier extends ChangeNotifier {
@@ -8,8 +8,8 @@ class UserNotifier extends ChangeNotifier {
   final TextEditingController _titlee = TextEditingController();
   final TextEditingController _name = TextEditingController();
 
-  DateTime dateTime=DateTime.now();
-DateTime get createdTime => dateTime;
+  DateTime dateTime = DateTime.now();
+  DateTime get createdTime => dateTime;
   // static Object createdTime;
   TextEditingController get titlee => _titlee;
   TextEditingController get note => _note;
@@ -34,12 +34,11 @@ DateTime get createdTime => dateTime;
     return user.isDone;
   }
 
-   addUser(User user) => FirebaseApi.createUser(user);
+  addUser(User user) => FirebaseApi.createUser(user);
   //  addUser(User user) {
   //   _userlist.add(user);
   //   notifyListeners();
   // }
-
 
   clear() {
     _note.clear();
@@ -58,7 +57,7 @@ DateTime get createdTime => dateTime;
   void setNotes(List<User> user) => _userlist = userList;
 
   void setNotess(List<User> userList) =>
-      WidgetsBinding.instance?.addPostFrameCallback((_) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
         _userlist = userList;
 // @override
         notifyListeners();
@@ -69,9 +68,9 @@ DateTime get createdTime => dateTime;
     notifyListeners();
   }
 
-  void updateNotes(User user, String title, String note) {
+  void updateNotes(User user, String title, String description) {
     user.title = title;
-    user.note = note;
+    user.description = description;
     notifyListeners();
   }
-} 
+}

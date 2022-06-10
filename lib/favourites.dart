@@ -22,8 +22,7 @@ class Favourites extends StatelessWidget {
                   color: Colors.green),
             ),
           )
-
-       : ListView.separated(
+        : ListView.separated(
             separatorBuilder: ((context, index) => Container(
                   color: Colors.green,
                   height: 1,
@@ -39,7 +38,8 @@ class Favourites extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
-                  color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                  color: Colors
+                      .primaries[Random().nextInt(Colors.primaries.length)],
                   child: Expanded(
                       child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -53,7 +53,8 @@ class Favourites extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Checkbox(
                                         value: note.isDone,
@@ -86,7 +87,7 @@ class Favourites extends StatelessWidget {
                                 height: 2,
                               ),
                               Text(
-                                note.note,
+                                note.description,
                                 style: const TextStyle(fontSize: 15),
                               ),
                             ],

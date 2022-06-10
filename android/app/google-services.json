@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "620984755539",
-    "project_id": "note-55275",
-    "storage_bucket": "note-55275.appspot.com"
+    "project_number": "545211646727",
+    "project_id": "ebenezer-d570d",
+    "storage_bucket": "ebenezer-d570d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:620984755539:android:164e50d3725fa17a9c2da6",
+        "mobilesdk_app_id": "1:545211646727:android:7cfad3fd23993ba495bba2",
         "android_client_info": {
           "package_name": "com.example.note"
         }
       },
       "oauth_client": [
         {
-          "client_id": "620984755539-pglm6gd7jclc5l6hkgi9sn8jrbb3j283.apps.googleusercontent.com",
+          "client_id": "545211646727-q2ne3tljkcsbrneb1r0ohb8gtlaf20lh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyANhsXqu2ObbmcVzsAwFxu8mQlN0BhziGQ"
+          "current_key": "AIzaSyAwJ8JLKXKaUNU-VpTwr4oMuwcBZXRn3hk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "620984755539-pglm6gd7jclc5l6hkgi9sn8jrbb3j283.apps.googleusercontent.com",
+              "client_id": "545211646727-q2ne3tljkcsbrneb1r0ohb8gtlaf20lh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

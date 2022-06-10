@@ -17,19 +17,13 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -52,11 +46,30 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyC8sKW_EIQGDQybLZWxm15UFOVnDAgO8kM',
+    appId: '1:545211646727:web:cdca75014b1d39d295bba2',
+    messagingSenderId: '545211646727',
+    projectId: 'ebenezer-d570d',
+    authDomain: 'ebenezer-d570d.firebaseapp.com',
+    storageBucket: 'ebenezer-d570d.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyANhsXqu2ObbmcVzsAwFxu8mQlN0BhziGQ',
-    appId: '1:620984755539:android:164e50d3725fa17a9c2da6',
-    messagingSenderId: '620984755539',
-    projectId: 'note-55275',
-    storageBucket: 'note-55275.appspot.com',
+    apiKey: 'AIzaSyAwJ8JLKXKaUNU-VpTwr4oMuwcBZXRn3hk',
+    appId: '1:545211646727:android:7cfad3fd23993ba495bba2',
+    messagingSenderId: '545211646727',
+    projectId: 'ebenezer-d570d',
+    storageBucket: 'ebenezer-d570d.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyBx-XXzKw3ZfYlzGM4Y77tNmVq1Id3fkuE',
+    appId: '1:545211646727:ios:0fcb660c2c7f1b1395bba2',
+    messagingSenderId: '545211646727',
+    projectId: 'ebenezer-d570d',
+    storageBucket: 'ebenezer-d570d.appspot.com',
+    iosClientId: '545211646727-amep8u21dl6i1vkifrqf7o3ch10k25j5.apps.googleusercontent.com',
+    iosBundleId: 'com.example.note',
   );
 }
