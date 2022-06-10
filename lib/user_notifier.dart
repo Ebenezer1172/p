@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:note/firebase_api.dart'; 
+import 'package:note/firebase_api.dart';
+// import 'package:note/firebase_api.dart'; 
 import 'user.dart';
 
 class UserNotifier extends ChangeNotifier {
